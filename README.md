@@ -54,33 +54,85 @@ MilestoneElement(
     ],
     verticalDividerLength: 100,
     milestoneColor: Colors.red
-),
+)
 ```
 
 ![red](./images/milestone_red.png)
 
+#### 2. Orange One
+
+```dart
+MilestoneElement(
+    reached: true,
+    title: 'Title 2',
+    milestoneChild: Text(
+        'Ok',
+        style: TextStyle(
+            color: Colors.black
+        ),
+    ),
+    details: [
+        (true, 'Detail 1'),
+        (true, 'Detail 2'),
+        (false, 'Detail 3')
+    ],
+    milestoneColor: Colors.orange
+)
+```
+
+![red](./images/milestone_orange.png)
+
+#### 3. Blue One
+
+```dart
+MilestoneElement(
+    reached: false,
+    title: 'Title 3',
+    milestoneChild: Icon(
+        Icons.cancel_outlined,
+        color: Colors.red,
+    ),
+    details: [
+        (false, 'Detail 1'),
+        (false, 'Detail 2'),
+        (false, 'Detail 3')
+    ],
+    milestoneColor: Colors.blue
+)
+```
+
+![red](./images/milestone_blue.png)
+
+## Properties
+
 ### Parent Properties
 
-| Property | Type | Default Value | Description                                       |
-|----------|------|---------------|---------------------------------------------------|
-| items    | List | *default*     | The list of the MilestoneElement you want to show |
+| Property | Type | Default Value | Description                                         |
+|----------|------|---------------|-----------------------------------------------------|
+| items    | List | *default*     | The list of the `MilestoneElement` you want to show |
 
 ### MilestoneElement Properties
 
-| Property              | Type                 | Default Value | Description                                                                                                                                                                                                               |
-|-----------------------|----------------------|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| title                 | String               | Empty String  | The title of your Milestone                                                                                                                                                                                               |
-| titleFontSize         | double               | 18            | The title font size                                                                                                                                                                                                       |
-| reached               | bool                 | false         | The value that represent your milestone is reached or not and will color the container representing it                                                                                                                    |
-| details               | List<(bool, String)> | Empty List    | The list representing the sub-points that can be set as reached or not and, in addition, the label to describe the sub-point itself                                                                                       |
-| labelColor            | Color                | Colors.black  | the font color of the title and sub-points labels                                                                                                                                                                         |
-| milestoneColor        | Color                | Colors.white  | The color of the title and sub-points containers. If specified without specifying the milestoneGradient, this color will be use in a LinearGradient with white Color to determinate the milestone and sub-points gradient |
-| milestoneGradient     | Gradient             | null          | The gradient used to color the milestone and sub-points containers. If not specified, will be considered the milestoneColor param                                                                                         |
-| milestoneChild        | Widget               | null          | The widget to show inside the milestone container                                                                                                                                                                         |
-| verticalDividerLength | double               | null          | The length of each milestone trace to the next one                                                                                                                                                                        |
+| Property              | Type                 | Default Value | Description                                                                                                                                                                                                                 |
+|-----------------------|----------------------|---------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| title                 | String               | Empty String  | The title of your milestone                                                                                                                                                                                                 |
+| titleFontSize         | double               | 18            | The title font size                                                                                                                                                                                                         |
+| reached               | bool                 | false         | The value that represent your milestone is reached or not and will color the container representing it                                                                                                                      |
+| details               | List<(bool, String)> | Empty List    | The list representing the sub-points that can be set as reached or not and, in addition, the label to describe the sub-point itself                                                                                         |
+| labelColor            | Color                | Colors.black  | the font color of the title and sub-points labels                                                                                                                                                                           |
+| milestoneColor        | Color                | Colors.white  | The color of the title and sub-points containers. If specified without specifying the `milestoneGradient`, this color will be use in a LinearGradient with white Color to determinate the milestone and sub-points gradient |
+| milestoneGradient     | Gradient             | null          | The gradient used to color the milestone and sub-points containers. If not specified, will be considered the `milestoneColor` param                                                                                         |
+| milestoneChild        | Widget               | null          | The widget to show inside the milestone container                                                                                                                                                                           |
+| verticalDividerLength | double               | null          | The length of each milestone trace to the next one                                                                                                                                                                          |
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+### Notes
+
+The Package is under development and I'm opened to every idea that can improve its functionality.
+
+### Support Me
+
+If you would like to help me improving my work, just consider to buy me a coffee
+
+ <a href="https://www.buymeacoffee.com/antwen"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=antwen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
