@@ -4,6 +4,8 @@
 
 This Package let you create a milestone timeline with gradients points and a list of sub-details where each one can be set as reached/enabled or not. Each milestone can have the same color or a different one. You can custom colors and font sizes as you prefer. Also it's possible to set a Widget as child of the milestone point to include it as shown in the preview.
 
+### [What's new?](https://github.com/Antwen97/flutter-milestones/blob/master/CHANGELOG.md)
+
 ## Features Preview
 
 ![preview](./images/example.png)
