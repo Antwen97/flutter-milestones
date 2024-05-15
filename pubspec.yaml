@@ -1,6 +1,6 @@
 name: flutter_milestones
-description: "A good way to show the progress of your workflow. Decide which color is better to use for each milestone. Describe every single point to let users understand what you are doing. Detailed progress is provided using the boolean value on each sub-point."
-version: 1.0.1
+description: "A good way to show the progress of your workflow. Detailed progress is provided using the boolean value on each sub-point."
+version: 1.0.2
 homepage: https://github.com/Antwen97/flutter-milestones
 
 environment:

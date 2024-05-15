@@ -14,9 +14,7 @@ import 'components/gradient_container.dart';
 /// be personalized as user wants. Colors, fontSize and mode described in the
 /// [MilestoneElement] docs.
 
-
 class Milestones extends StatefulWidget {
-
   ///The list of MilestoneElements
   final List<MilestoneElement> items;
 
@@ -191,15 +189,34 @@ class _MilestonesState extends State<Milestones> {
 /// - [milestoneChild] is the Widget displayed inside the Milestone Container
 /// - [verticalDividerLength] is the height of the verticalDivider that connects Milestones
 class MilestoneElement {
+  /// - [title] is the milestone title, displayed with a bigger fontSize and placed near the milestone container;
   final String title;
+
+  /// - [titleFontSize] is used to change the default title fontSize
   final double titleFontSize;
+
+  /// - [reached] is the bool param used to fill the Milestone container
   final bool reached;
+
+  /// - [details] defined by a List<(bool, String)> is used to fill or not a sub-point with the indicated label
   final List<(bool, String)> details;
+
+  /// - [labelColor] is used to define the Milestone and its sub-point labels color
   final Color labelColor;
+
+  /// - [detailsFontSize] is used to override the default detail fontSize
   final double detailsFontSize;
+
+  /// - [milestoneColor] is used to override the default color of the milestone. This color is combined with [Colors.white] to define a Linear gradient
   final Color milestoneColor;
+
+  /// - [milestoneGradient] is used to override the default gradient of the milestone. If null, the gradient refers to [milestoneColor]
   final Gradient? milestoneGradient;
+
+  /// - [milestoneChild] is the Widget displayed inside the Milestone Container
   final Widget? milestoneChild;
+
+  /// - [verticalDividerLength] is the height of the verticalDivider that connects Milestones
   final double? verticalDividerLength;
 
   const MilestoneElement(

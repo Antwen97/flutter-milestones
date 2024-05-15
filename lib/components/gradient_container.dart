@@ -18,24 +18,56 @@ import 'package:gradient_borders/box_borders/gradient_box_border.dart';
 /// - [padding] defines the padding between the child/label and the container borders
 /// - [label] can be used in case you just want to show a string inside the container. If [child] is not specified and [label] is null, the label default value is set to Empty String
 /// - [labelMaxLines] in line with [AutoSizeText] library, you can specify how many lines the label can use before starting reducing its fontSize to adapt the label to the [constraints] or [size]
+/// - [labelFontSize] is the fontSize of [label]
 /// - [labelColor] is the color of [label]
 /// - [child] can be used to override the [label] text widget
 class GradientContainer extends StatelessWidget {
+  /// [gradient] is the main gradient used to fill the container
   final Gradient gradient;
+
+  /// [gradientOnBorders] is a bool param to move the gradient on borders. If [true] it override the Container background and fill it with a [Colors.transparent] color.
   final bool gradientOnBorders;
+
+  /// [color] could be used to override the default color of the container. If specified it overrides the gradient in case of [gradientOnBorders] false, otherwise the background color
   final Color? color;
+
+  /// [borderColor] could be specified to override the borderColor. It overrides the gradient in case of [gradientOnBorders] true, otherwise it colors the Container borders
   final Color? borderColor;
+
+  /// [borderWidth] the width of the Container borders
   final double? borderWidth;
+
+  /// [borderRadius] the Radius of Container Borders
   final BorderRadius? borderRadius;
+
+  /// [constraints] helps the user to have a dynamical components that respects defined constraints
   final BoxConstraints? constraints;
+
+  /// [size] helps the user to force the Container Size. If specified it overrides [constraints]
   final Size? size;
+
+  /// [isExpanded] will expand the container in horizontal
   final bool isExpanded;
+
+  /// [contentAlignment] specifies the content Alignment of the container
   final MainAxisAlignment contentAlignment;
+
+  /// [padding] defines the padding between the child/label and the container borders
   final EdgeInsetsGeometry padding;
+
+  /// [label] can be used in case you just want to show a string inside the container. If [child] is not specified and [label] is null, the label default value is set to Empty String
   final String? label;
+
+  /// [labelMaxLines] in line with [AutoSizeText] library, you can specify how many lines the label can use before starting reducing its fontSize to adapt the label to the [constraints] or [size]
   final int labelMaxLines;
+
+  /// [labelFontSize] is the fontSize of [label]
   final double labelFontSize;
+
+  /// - [labelColor] is the color of [label]
   final Color labelColor;
+
+  /// - [child] can be used to override the [label] text widget
   final Widget? child;
 
   const GradientContainer(
